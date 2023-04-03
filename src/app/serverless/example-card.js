@@ -10,7 +10,7 @@ exports.main = async (context = {}, sendResponse) => {
     "content": [
       {
         "type": "heading",
-        "text": "Medical Data"
+        "text": "Custom Card Example"
       },
       {
 				"type": "alert",
@@ -29,8 +29,8 @@ exports.main = async (context = {}, sendResponse) => {
 				"type": "descriptionList",
 				"items": [
 					{
-						"label": "Doctor Name:",
-						"value": "John Doctor"
+						"label": "Name:",
+						"value": "John Smith"
 					},
 					{
 						"label": "Address:",
