@@ -11,7 +11,7 @@ const introMessage =
 		"content": [
 			{
 				"type": "heading",
-				"text": "Data"
+				"text": "KPIs"
 			},
     ]
     }; 
@@ -52,9 +52,7 @@ const introMessage =
   ];
 
   try {
-    const { data } = await axios.get("https://zenquotes.io/api/random");
-
-    const quoteSections = [
+    const analyticsSection = [
 	    {
   "type": "statistics",
   "items": [
