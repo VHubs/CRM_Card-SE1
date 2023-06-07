@@ -46,10 +46,6 @@ exports.main = async (context = {}, sendResponse) => {
   const statisticsTile = {
     "type": "tile",
     "content": [
-       {
-    "type": "heading",
-    "text": "KPIs"
-  },
       {
         "type": "statistics",
         "items": [
@@ -81,7 +77,18 @@ exports.main = async (context = {}, sendResponse) => {
     ]
   };
 
+  const alertComponent = {
+    "type": "alert",
+    "title": "This is the alert title.",
+    "body": {
+      "type": "text",
+      "format": "markdown",
+      "text": "This is the body text of an `info` alert."
+    },
+    "variant": "info"
+  };
+
   sendResponse({
-    sections: [introMessage1, statisticsTile],
+    sections: [introMessage1, statisticsTile, alertComponent],
   });
 };
