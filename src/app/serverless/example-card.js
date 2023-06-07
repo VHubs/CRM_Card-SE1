@@ -13,6 +13,7 @@ exports.main = async (context = {}, sendResponse) => {
         "type": "heading",
         "text": "Custom Card",      
       },
+	    ]
       {
 				"type": "alert",
 				"title": "Alert: something you should be aware of",
