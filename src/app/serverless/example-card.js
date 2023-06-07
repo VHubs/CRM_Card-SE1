@@ -11,7 +11,7 @@ exports.main = async (context = {}, sendResponse) => {
       {
         "type": "heading",
         "text": "Custom Card Example",
-	"location":"crm.record.tab"
+	"location": "crm.record.tab"
       },
       {
 				"type": "alert",
@@ -58,7 +58,7 @@ exports.main = async (context = {}, sendResponse) => {
 			},
 			{
 				"type": "button",
-				"text": "Contact the doctor",
+				"text": "Contact",
 				"onClick": {
 					"type": "SERVERLESS_ACTION_HOOK",
 					"serverlessFunction": "exampleFunction"
