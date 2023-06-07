@@ -15,7 +15,7 @@ const introMessage =
 			},
     ]
     }; 
-const statistics = {
+const statistics = [{
   "type": "statistics",
   "items": [
    {
@@ -41,7 +41,8 @@ const statistics = {
          "text": "[Feb 12 - Feb 19](https://app.hubspot.com/)"
      }
    }
-  ];
+  ]
+	];
   
   const nextSteps = [
     {
