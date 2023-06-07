@@ -1,8 +1,8 @@
 {
 "type": "crm-card",
 "data": {
-"title": "Example CRM Card",
-"location": "crm.record.tab",
+"title": "CRM Card",
+"location": "crm.record.sidebar",
 "fetch": {
 "targetFunction": "crm-card",
 "objectTypes": [
