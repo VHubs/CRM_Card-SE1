@@ -52,7 +52,7 @@ const introMessage =
   ];
 
   try {
-    const analyticsSection = [
+    const data = [
 	    {
   "type": "statistics",
   "items": [
