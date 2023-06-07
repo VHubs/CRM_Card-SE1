@@ -106,7 +106,7 @@ const iframeTile = {
   "content": [
       {
     "type": "heading",
-    "text": "KPIs"
+    "text": "iFrame"
   },
     {
       "type": 'text',
