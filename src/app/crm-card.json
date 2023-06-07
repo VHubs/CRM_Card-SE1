@@ -9,7 +9,15 @@
     {
      "name": "contacts",
      "propertiesToSend": ["firstname"]
+    },
+{
+    "type": "button",
+    "text": "Submit Form",
+    "onClick": {
+      "type": "SUBMIT",
+      "serverlessFunction": "exampleFunction"
     }
+
    ]
   }
  }
