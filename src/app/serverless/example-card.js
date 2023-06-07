@@ -8,11 +8,12 @@ exports.main = async (context = {}, sendResponse) => {
 const tileOne = 
     {
 		"type": "tile",
-		"content": 
+		"content": [
 			{
 				"type": "heading",
 				"text": "CRM Card"
 			},
+			]
       			{
 		"type": "alert",
 		"title": "Alert: something you should be aware of",
