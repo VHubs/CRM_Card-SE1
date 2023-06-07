@@ -43,51 +43,41 @@ exports.main = async (context = {}, sendResponse) => {
     ]
 };
 
-  try {
-    const { data } = await axios.get("https://zenquotes.io/api/random");
-
-    const quoteSections = [
+  const statisticsTile = {
+    "type": "tile",
+    "content": [
       {
-        type: "tile",
-        body: [
+        "type": "statistics",
+        "items": [
           {
-            type: "text",
-            format: "markdown",
-            text: `**Hello ${firstname}, here's your quote for the day**!`,
+            "label": "Views last week",
+            "number": "55",
+            "description": "Apr 11 - Apr 17"
           },
           {
-            type: "text",
-            format: "markdown",
-            text: `_${data[0].q}_`,
+            "label": "Views this month",
+            "number": "203",
+            "description": {
+              "type": "trend",
+              "value": "23.36%",
+              "direction": "increase"
+            }
           },
           {
-            type: "text",
-            format: "markdown",
-            text: `_**Author**: ${data[0].a}_`,
-          },
-        ],
-      },
-      {
-        type: "button",
-        text: "Get new quote",
-        onClick: {
-          type: "SERVERLESS_ACTION_HOOK",
-          serverlessFunction: "crm-card",
-        },
-      },
-    ];
+            "label": "Markdown syntax",
+            "number": "405",
+            "description": {
+               "type": "text",
+               "format": "markdown",
+               "text": "[Feb 12 - Feb 19](https://app.hubspot.com/)"
+           }
+          }
+        ]
+      }
+    ]
+  };
 
-    sendResponse({
-      sections: [introMessage1, ...quoteSections],
-    });
-  } catch (error) {
-    // "message" will create an error feedback banner when it catches an error
-    sendResponse({
-      message: {
-        type: "ERROR",
-        body: `Error: ${error.message}`,
-      },
-      sections: [introMessage1],
-    });
-  }
+  sendResponse({
+    sections: [introMessage1, statisticsTile],
+  });
 };
