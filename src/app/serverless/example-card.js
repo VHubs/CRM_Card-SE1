@@ -13,7 +13,6 @@ exports.main = async (context = {}, sendResponse) => {
 				"type": "heading",
 				"text": "Custom Card"
 			},
-			]
 			{
 "type": "alert",
 "title": "Alert: something you should be aware of",
@@ -22,7 +21,6 @@ exports.main = async (context = {}, sendResponse) => {
 "type": "text",
 "text": "click on the following url to either view or redirected to the document"
 }
-},
     
     };
     
