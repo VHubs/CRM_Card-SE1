@@ -5,6 +5,28 @@ exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
 
+	{
+  "type": "crm-card",
+  "data": {
+    "title": "Example CRM Card",
+    "location": "crm.record.tab",
+    "fetch": {
+      "targetFunction": "crm-card",
+      "objectTypes": [
+        {
+          "name": "contacts",
+          "propertiesToSend": ["firstname"]
+        }
+      ]
+    }
+  }
+}
+	
+	
+	
+	
+	
+	
   const tileOne = {
     "type": "crm-card",
 "location":"crm.record.tab",
