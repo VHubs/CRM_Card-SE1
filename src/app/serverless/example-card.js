@@ -7,11 +7,11 @@ exports.main = async (context = {}, sendResponse) => {
 
   const tileOne = {
     "type": "tile",
+	"location": "crm.record.tab",
     "content": [
       {
         "type": "heading",
         "text": "Custom Card Example",
-	"location": "crm.record.tab"
       },
       {
 				"type": "alert",
