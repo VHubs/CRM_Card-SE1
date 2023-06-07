@@ -4,20 +4,17 @@ const axios = require("axios");
 exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
-{
- "type": "crm-card",
- "data": {
-  "title": "Example custom card",
-  "location":"crm.record.tab",
-    }
+
   const tileOne = {
     "type": "tile",
     "content": [
       {
         "type": "heading",
-	"location": "crm.record.tab",
         "text": "Custom Card Example",      
       },
+	    {
+	    "location": "crm.record.tab",
+	    },
       {
 				"type": "alert",
 				"title": "Alert: something you should be aware of",
