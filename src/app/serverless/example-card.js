@@ -90,11 +90,11 @@ exports.main = async (context = {}, sendResponse) => {
     },
     {
       "type": "alert",
-      "title": "This is the alert title.",
+      "title": "Limit reached",
       "body": {
         "type": "text",
         "format": "markdown",
-        "text": "click on the following url to either view or redirected to the document"
+        "text": "click on the following url to either view or redirected to the details"
       },
       "variant": "error"
     }
