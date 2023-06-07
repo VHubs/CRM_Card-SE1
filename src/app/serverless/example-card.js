@@ -68,7 +68,7 @@ exports.main = async (context = {}, sendResponse) => {
       "body": {
         "type": "text",
         "format": "markdown",
-        "text": "click on the following url to the details"
+        "text": "click on the following url to view the details"
       },
       "variant": "error"
     }
