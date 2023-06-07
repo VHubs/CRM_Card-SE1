@@ -10,10 +10,6 @@ exports.main = async (context = {}, sendResponse) => {
     "type": "tile",
     "content": [
         {
-            "type": "heading",
-            "text": "Data"
-        },
-        {
     "type": "heading",
     "text": "Products purchased in last month"
   },
