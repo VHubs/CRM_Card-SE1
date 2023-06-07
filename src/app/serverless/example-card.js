@@ -86,13 +86,13 @@ exports.main = async (context = {}, sendResponse) => {
         "type": "statistics",
         "items": [
           {
-            "label": "Views last week",
-            "number": "55",
+            "label": "Errors",
+            "number": "2",
             "description": "Apr 11 - Apr 17"
           },
           {
-            "label": "Views this month",
-            "number": "203",
+            "label": "Logins this month",
+            "number": "24",
             "description": {
               "type": "trend",
               "value": "23.36%",
@@ -100,8 +100,8 @@ exports.main = async (context = {}, sendResponse) => {
             }
           },
           {
-            "label": "Markdown syntax",
-            "number": "405",
+            "label": "Link Opens",
+            "number": "13",
             "description": {
                "type": "text",
                "format": "markdown",
