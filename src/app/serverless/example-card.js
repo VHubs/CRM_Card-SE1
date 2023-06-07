@@ -11,9 +11,19 @@ exports.main = async (context = {}, sendResponse) => {
 		"content": [
 			{
 				"type": "heading",
-				"text": "Medical Data"
+				"text": "Custom Card"
 			},
-    ]
+			]
+			{
+"type": "alert",
+"title": "Alert: something you should be aware of",
+"variant": "error",
+"body": {
+"type": "text",
+"text": "click on the following url to either view or redirected to the document"
+}
+},
+    
     };
     
   const nextSteps = [
