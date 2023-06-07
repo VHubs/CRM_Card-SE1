@@ -23,7 +23,7 @@ exports.main = async (context = {}, sendResponse) => {
     "content": [
         {
     "type": "heading",
-    "text": "Product limits reached"
+    "text": "Service usage"
   },
   {
     "type": "progressBar",
@@ -68,7 +68,7 @@ exports.main = async (context = {}, sendResponse) => {
       "body": {
         "type": "text",
         "format": "markdown",
-        "text": "click on the following url to either view or redirected to the details"
+        "text": "click on the following url to the details"
       },
       "variant": "error"
     }
