@@ -132,7 +132,7 @@ const iframeTile = {
         // Width and height of the iframe (in pixels)
         "width": 700,
         "height": 400,
-        "uri": 'https://files.coinmarketcap.com/static/widget/currency.js',
+        "uri": 'https://www.boerse.de/realtime-kurse/Dax-Aktien/DE0008469008',
       },
     },
   ],
