@@ -156,7 +156,7 @@ const KPIs =
     ];
 
     sendResponse({
-      sections: [introMessage, ...quoteSections, ...nextSteps],
+      sections: [KPIs, ...Progress, ...nextSteps],
     });
   } catch (error) {
     // "message" will create an error feedback banner when it catches an error
