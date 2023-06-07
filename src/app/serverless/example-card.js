@@ -46,6 +46,10 @@ exports.main = async (context = {}, sendResponse) => {
   const statisticsTile = {
     "type": "tile",
     "content": [
+       {
+    "type": "heading",
+    "text": "KPIs"
+  },
       {
         "type": "statistics",
         "items": [
