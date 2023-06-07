@@ -14,16 +14,19 @@ const tileOne =
 				"text": "CRM Card"
 			},
 			]
-      			{
-		"type": "alert",
-		"title": "Alert: something you should be aware of",
-		"variant": "error",
-		"body": {
-		"type": "text",
-		"text": "click on the following url to either view or redirected to the document"
-			}
     
     };
+	
+const introMessage = {
+    type: "alert",
+    title: "Your first UI extension is ready!",
+    variant: "success",
+    body: {
+      type: "text",
+      format: "markdown",
+      text: "Congratulations! You just deployed your first **HubSpot UI extension**. This example CRM card uses the [ZenQuotes public API](https://zenquotes.io/) to display a daily quote. It also includes custom button actions using serverless functions.",
+    },
+  };
     
   const nextSteps = [
     {
