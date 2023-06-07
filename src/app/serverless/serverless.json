@@ -4,7 +4,8 @@
   "appFunctions": {
     "crm-card": {
       "file": "example-card.js",
-      "secrets": []
+      "secrets": [],
+      "location":"crm.record.tab"
     }
   }
 }
