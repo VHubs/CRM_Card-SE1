@@ -172,6 +172,6 @@ const iframeTile = {
   ],
 };
   sendResponse({
-    sections: [introMessage1, statisticsTile, alertComponent, iframeTile, formTile],
+    sections: [introMessage1, alertComponent, statisticsTile, iframeTile, formTile],
   });
 };
