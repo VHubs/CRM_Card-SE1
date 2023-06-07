@@ -52,6 +52,7 @@ const introMessage =
   ];
 
   try {
+	const { data } = await axios.get("https://zenquotes.io/api/random");
     const data = [
 	    {
   "type": "statistics",
