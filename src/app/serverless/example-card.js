@@ -14,9 +14,7 @@ const introMessage =
 				"text": "Data"
 			},
     ]
-    };
-  const analytics =
-	{
+    }, {
   "type": "statistics",
   "items": [
    {
@@ -44,6 +42,7 @@ const introMessage =
    }
   ]
 };
+  
   const nextSteps = [
     {
       type: "alert",
