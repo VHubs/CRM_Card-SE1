@@ -48,14 +48,7 @@ const KPIs =
 {
     "type": "tile",
     "content": [
-        {
-            "type": "heading",
-            "text": "Limits"
-        },
-        {
-            "type": "heading",
-            "text": "Products purchased in last month"
-        },
+        
         {
             "type": "progressBar",
             "variant": "success",
