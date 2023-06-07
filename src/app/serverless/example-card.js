@@ -55,26 +55,6 @@ const introMessage =
     const { data } = await axios.get("https://zenquotes.io/api/random");
 
     const quoteSections = [
-      {
-        type: "tile",
-        body: [
-          {
-            type: "text",
-            format: "markdown",
-            text: `**Hello ${firstname}, here's your quote for the day**!`,
-          },
-          {
-            type: "text",
-            format: "markdown",
-            text: `_${data[0].q}_`,
-          },
-          {
-            type: "text",
-            format: "markdown",
-            text: `_**Author**: ${data[0].a}_`,
-          },
-        ],
-      },
 	    {
   "type": "statistics",
   "items": [
@@ -102,15 +82,7 @@ const introMessage =
      }
    }
   ]
-},
-      {
-        type: "button",
-        text: "Get new quote",
-        onClick: {
-          type: "SERVERLESS_ACTION_HOOK",
-          serverlessFunction: "crm-card",
-        },
-      },
+}
     ];
 
     sendResponse({
