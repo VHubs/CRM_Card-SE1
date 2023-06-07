@@ -11,8 +11,8 @@ exports.main = async (context = {}, sendResponse) => {
     "content": [
       {
         "type": "heading",
-        "text": "Custom Card",      
-      },
+        "text": "Custom Card"      
+      }
 	    ]
       {
 				"type": "alert",
