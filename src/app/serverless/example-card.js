@@ -11,11 +11,11 @@ const introMessage =
 		"content": [
 			{
 				"type": "heading",
-				"text": "KPIs"
+				"text": "Medical Data"
 			},
     ]
-    }; 
-  
+    };
+    
   const nextSteps = [
     {
       type: "alert",
@@ -52,36 +52,37 @@ const introMessage =
   ];
 
   try {
-	const { data } = await axios.get("https://zenquotes.io/api/random");
-    const data = [
-	    {
-  "type": "statistics",
-  "items": [
-   {
-    "label": "Views last week",
-    "number": "55",
-    "description": "Apr 11 - Apr 17"
-   },
-   {
-    "label": "Views this month",
-    "number": "203",
-    "description": {
-      "type": "trend",
-      "value": "23.36%",
-      "direction": "increase"
-      }
-    },
-    {
-      "label": "Markdown syntax",
-      "number": "405",
-      "description": {
-         "type": "text",
-         "format": "markdown",
-         "text": "[Feb 12 - Feb 19](https://app.hubspot.com/)"
-     }
-   }
-  ]
-}
+    const { data } = await axios.get("https://zenquotes.io/api/random");
+
+    const quoteSections = [
+      {
+        type: "tile",
+        body: [
+          {
+            type: "text",
+            format: "markdown",
+            text: `**Hello ${firstname}, here's your quote for the day**!`,
+          },
+          {
+            type: "text",
+            format: "markdown",
+            text: `_${data[0].q}_`,
+          },
+          {
+            type: "text",
+            format: "markdown",
+            text: `_**Author**: ${data[0].a}_`,
+          },
+        ],
+      },
+      {
+        type: "button",
+        text: "Get new quote",
+        onClick: {
+          type: "SERVERLESS_ACTION_HOOK",
+          serverlessFunction: "crm-card",
+        },
+      },
     ];
 
     sendResponse({
