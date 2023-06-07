@@ -3,7 +3,19 @@ const axios = require("axios");
 
 exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
-  const { firstname } = context.propertiesToSend;
+  const { firstname, event } = context.propertiesToSend;
+   // Check if the event is a form submit event
+  if (event && event.type === 'SUBMIT') {
+    const { example_input } = event.payload.formState;
+    sendResponse({
+      message: {
+        type: 'SUCCESS',
+        body: `Form submit was successful. Input's value: ${example_input}`,
+      },
+    });
+    return;  // Don't forget to return here, so the function execution stops after sending the response
+  }
+
 
   const introMessage1 = 
     {
@@ -122,6 +134,40 @@ const iframeTile = {
         "height": 400,
         "uri": 'https://www.youtube.com/embed/FDumsLFwyNM',
       },
+    },
+  ],
+};
+  
+  const formTile = {
+  "type": "tile",
+  "content": [
+     {
+    "type": "heading",
+    "text": "Form"
+  },
+    {
+      "type": 'text',
+      "text": "This example displays a simple form with a text input and a submit button. Inputting data into the field and clicking the submit button shows a banner with the user's input.",
+    },
+    {
+      "type": 'form',
+      "content": [
+        {
+          "type": 'input',
+          "name": 'example_input',
+          "inputType": 'text',
+          "label": 'Example input field',
+          "initialValue": 'Default value of the input field',
+        },
+        {
+          "type": 'button',
+          "text": 'Submit form',
+          "onClick": {
+            "type": 'SUBMIT',
+            "serverlessFunction": 'crm-card',
+          },
+        },
+      ],
     },
   ],
 };
