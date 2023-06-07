@@ -23,23 +23,23 @@ exports.main = async (context = {}, sendResponse) => {
     "content": [
         {
     "type": "heading",
-    "text": "Products purchased in last month"
+    "text": "Product limits reached"
   },
   {
     "type": "progressBar",
     "variant": "success",
     "valueMax": 150,
-    "value": 50,
-    "title": "T-shirts",
-    "valueDescription": "50 out of 150",
+    "value": 155,
+    "title": "Subscription A",
+    "valueDescription": "150 out of 150",
     "showPercentage": true
   },
   {
     "type": "progressBar",
     "variant": "warning",
     "valueMax": 100,
-    "value": 20,
-    "title": "Bottles",
+    "value": 40,
+    "title": "Subscription B",
     "valueDescription": "20 out of 100",
     "showPercentage": true
   },
@@ -48,8 +48,8 @@ exports.main = async (context = {}, sendResponse) => {
     "variant": "danger",
     "valueMax": 150,
     "value": 10,
-    "title": "Stickers",
-    "valueDescription": "10 out of 150",
+    "title": "Subscription C",
+    "valueDescription": "30 out of 150",
     "showPercentage": true
   }
     ]
