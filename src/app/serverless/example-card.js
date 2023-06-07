@@ -5,30 +5,28 @@ exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
 
-const tileOne = 
+const introMessage = 
     {
 		"type": "tile",
 		"content": [
 			{
 				"type": "heading",
-				"text": "CRM Card"
+				"text": "Medical Data"
 			},
-			]
-    
+    ]
     };
-	
-const introMessage = {
-    type: "alert",
-    title: "Your first UI extension is ready!",
-    variant: "success",
-    body: {
-      type: "text",
-      format: "markdown",
-      text: "Congratulations! You just deployed your first **HubSpot UI extension**. This example CRM card uses the [ZenQuotes public API](https://zenquotes.io/) to display a daily quote. It also includes custom button actions using serverless functions.",
-    },
-  };
     
   const nextSteps = [
+    {
+      type: "alert",
+      title: "Alert: something you should be aware of",
+      variant: "error",
+      body: [{
+        type: "text",
+        text: "click on the following url to either view or redirected to the document"
+      },
+    ]
+    },
     {
       type: "tile",
       content: 
@@ -100,52 +98,3 @@ const introMessage = {
       sections: [introMessage],
     });
   }
-};
-  try {
-    const { data } = await axios.get("https://zenquotes.io/api/random");
-
-    const quoteSections = [
-      {
-        type: "tile",
-        body: [
-          {
-            type: "text",
-            format: "markdown",
-            text: `**Hello ${firstname}, here's your quote for the day**!`,
-          },
-          {
-            type: "text",
-            format: "markdown",
-            text: `_${data[0].q}_`,
-          },
-          {
-            type: "text",
-            format: "markdown",
-            text: `_**Author**: ${data[0].a}_`,
-          },
-        ],
-      },
-      {
-        type: "button",
-        text: "Get new quote",
-        onClick: {
-          type: "SERVERLESS_ACTION_HOOK",
-          serverlessFunction: "crm-card",
-        },
-      },
-    ];
-
-    sendResponse({
-      sections: [introMessage, ...quoteSections, ...nextSteps],
-    });
-  } catch (error) {
-    // "message" will create an error feedback banner when it catches an error
-    sendResponse({
-      message: {
-        type: "ERROR",
-        body: `Error: ${error.message}`,
-      },
-      sections: [introMessage],
-    });
-  }
-};
