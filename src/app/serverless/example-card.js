@@ -11,7 +11,7 @@ exports.main = async (context = {}, sendResponse) => {
       {
         "type": "heading",
 	"location": "crm.record.tab",
-        "text": "Custom Card Example"      
+        "text": "Custom Card Example",      
       },
       {
 				"type": "alert",
