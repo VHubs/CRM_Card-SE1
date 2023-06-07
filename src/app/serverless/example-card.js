@@ -104,6 +104,10 @@ exports.main = async (context = {}, sendResponse) => {
 const iframeTile = {
   "type": "tile",
   "content": [
+      {
+    "type": "heading",
+    "text": "KPIs"
+  },
     {
       "type": 'text',
       "text": 'Clicking the button will open a modal dialog with an iframe that displays the content at the provided URL.',
