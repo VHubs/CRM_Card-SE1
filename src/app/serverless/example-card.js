@@ -40,8 +40,7 @@ const introMessage =
          "text": "[Feb 12 - Feb 19](https://app.hubspot.com/)"
      }
    }
-  ]
-};
+  ];
   
   const nextSteps = [
     {
