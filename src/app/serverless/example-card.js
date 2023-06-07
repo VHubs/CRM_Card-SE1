@@ -44,8 +44,15 @@ const KPIs =
     ]
 };
   
-  const Progress = 
+  const KPIs = 
 {
+    "type": "tile",
+    "content": [
+        {
+            "type": "heading",
+            "text": "Data"
+        },
+        {
     "type": "heading",
     "text": "Products purchased in last month"
   },
@@ -75,7 +82,11 @@ const KPIs =
     "title": "Stickers",
     "valueDescription": "10 out of 150",
     "showPercentage": true
-  };
+  }
+            ]
+        }
+    ]
+};
     
   const nextSteps = [
     {
