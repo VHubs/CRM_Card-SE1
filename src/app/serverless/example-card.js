@@ -44,7 +44,7 @@ const KPIs =
     ]
 };
   
-  const KPIs = 
+  const Progress = 
 {
     "type": "tile",
     "content": [
