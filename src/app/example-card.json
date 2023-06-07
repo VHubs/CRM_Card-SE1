@@ -1,16 +1,18 @@
-{
-  "type": "crm-card",
-  "data": {
-    "title": "Example CRM Card",
-    "location": "crm.record.tab",
-    "fetch": {
-      "targetFunction": "crm-card",
-      "objectTypes": [
+// crm-card.js
+exports.main = async (context = {}, sendResponse) => {
+    sendResponse({
+      sections:  [
         {
-          "name": "contacts",
-          "propertiesToSend": ["firstname"]
-        }
-      ]
-    }
-  }
-}
+          "type":"text",
+          "format":"markdown",
+          "text": "A table that displays contact data."
+      },
+      {
+          type: 'crm::table',
+          objectTypeId: '0-1',
+          properties: ['email', 'hubspot_owner_id', 'firstname', 'lastname'],
+          pageSize: 3
+      }
+      ],
+    });
+};
