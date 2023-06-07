@@ -50,7 +50,7 @@ const KPIs =
     "content": [
         {
             "type": "heading",
-            "text": "Data"
+            "text": "Limits"
         },
         {
             "type": "heading",
