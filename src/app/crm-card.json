@@ -17,7 +17,7 @@
       "type": "SUBMIT",
       "serverlessFunction": "exampleFunction"
     }
-
+}
    ]
   }
  }
