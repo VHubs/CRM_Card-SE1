@@ -5,7 +5,7 @@ exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
 
-	{
+	const tileOne = {
   "type": "crm-card",
   "data": {
     "title": "Example CRM Card",
@@ -20,7 +20,7 @@ exports.main = async (context = {}, sendResponse) => {
       ]
     }
   }
-}
+};
 	
 	
 	
