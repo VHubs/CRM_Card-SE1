@@ -30,16 +30,6 @@ const introMessage = {
     
   const nextSteps = [
     {
-      type: "alert",
-      title: "Alert: something you should be aware of",
-      variant: "error",
-      body: [{
-        type: "text",
-        text: "click on the following url to either view or redirected to the document"
-      },
-    ]
-    },
-    {
       type: "tile",
       content: 
         {
