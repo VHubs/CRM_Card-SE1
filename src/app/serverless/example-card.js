@@ -5,7 +5,7 @@ exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
 
-  const introMessage = 
+  const introMessage1 = 
     {
     "type": "tile",
     "content": [
@@ -43,40 +43,33 @@ exports.main = async (context = {}, sendResponse) => {
     ]
 };
     
-  const nextSteps = [
-    {
-      type: "alert",
-      title: "Alert: something you should be aware of",
-      variant: "error",
-      body: [{
-        type: "text",
-        text: "click on the following url to either view or redirected to the document"
-      },
-    ]
-    },
-    {
-      type: "tile",
-      content: 
+  const nextSteps = {
+    "components": [
         {
-          type: "heading",
-          text: "Medical Data"
+            "type": "tile",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Medical Data"
+                },
+            ],
         },
-      },
-
-    {
-      type: "divider",
-      distance: "small",
-    },
-    {
-      type: "heading",
-      text: "Next Steps",
-    },
-    {
-      type: "text",
-      format: "markdown",
-      text: "You can explore more [code samples](https://github.com/HubSpot/ui-extensions-examples) or UI components in the [CRM card builder](https://app.hubspot.com/l/extensible-ui/), or try code samples. If you get stuck, take look at your [build or deploy logs](https://app.hubspot.com/l/developer-projects/) or [serverless functions logs](https://app.hubspot.com/l/private-apps/).",
-    },
-  ];
+        {
+            "type": "divider",
+            "distance": "small",
+        },
+        {
+            "type": "heading",
+            "text": "Next Steps",
+        },
+        {
+            "type": "text",
+            "format": "markdown",
+            "text": "You can explore more [code samples](https://github.com/HubSpot/ui-extensions-examples) or UI components in the [CRM card builder](https://app.hubspot.com/l/extensible-ui/), or try code samples. If you get stuck, take look at your [build or deploy logs](https://app.hubspot.com/l/developer-projects/) or [serverless functions logs](https://app.hubspot.com/l/private-apps/).",
+        },
+    ]
+};
+ 
 
   try {
     const { data } = await axios.get("https://zenquotes.io/api/random");
@@ -113,7 +106,7 @@ exports.main = async (context = {}, sendResponse) => {
     ];
 
     sendResponse({
-      sections: [introMessage],
+      sections: [introMessage1, ...quoteSections, ...nextSteps],
     });
   } catch (error) {
     // "message" will create an error feedback banner when it catches an error
@@ -122,7 +115,7 @@ exports.main = async (context = {}, sendResponse) => {
         type: "ERROR",
         body: `Error: ${error.message}`,
       },
-      sections: [introMessage],
+      sections: [introMessage1],
     });
   }
 };
