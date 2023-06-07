@@ -100,8 +100,28 @@ exports.main = async (context = {}, sendResponse) => {
     }
   ]
 };
-
+  
+const iframeTile = {
+  "type": "tile",
+  "content": [
+    {
+      "type": 'text',
+      "text": 'Clicking the button will open a modal dialog with an iframe that displays the content at the provided URL.',
+    },
+    {
+      "type": 'button',
+      "text": 'Open iframe',
+      "onClick": {
+        "type": 'IFRAME',
+        // Width and height of the iframe (in pixels)
+        "width": 700,
+        "height": 400,
+        "uri": 'https://www.youtube.com/embed/FDumsLFwyNM',
+      },
+    },
+  ],
+};
   sendResponse({
-    sections: [introMessage1, statisticsTile, alertComponent],
+    sections: [introMessage1, statisticsTile, alertComponent, iframeTile],
   });
 };
