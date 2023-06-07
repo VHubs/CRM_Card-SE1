@@ -7,7 +7,7 @@ exports.main = async (context = {}, sendResponse) => {
 	
 	
   const tileOne = {
-    "type": "title",
+    "type": "tile",
     "content": [
       {
         "type": "heading",
