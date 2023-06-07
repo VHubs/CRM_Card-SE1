@@ -132,7 +132,7 @@ const iframeTile = {
         // Width and height of the iframe (in pixels)
         "width": 1200,
         "height": 600,
-        "uri": 'https://www.hubspot.com/artificial-intelligence',
+        "uri": 'https://chatspot.ai/?hubs_content=www.hubspot.com/artificial-intelligence&hubs_content-cta=homepage-nav2',
       },
     },
   ],
