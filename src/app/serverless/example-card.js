@@ -7,7 +7,7 @@ exports.main = async (context = {}, sendResponse) => {
 	
 	
   const tileOne = {
-    "type": "crm-card",
+    "type": "title",
     "content": [
       {
         "type": "heading",
