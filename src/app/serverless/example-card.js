@@ -54,6 +54,26 @@ exports.main = async (context = {}, sendResponse) => {
   }
     ]
 };
+  
+  const alertComponent = {
+  "type": "tile",
+  "content": [
+    {
+      "type": "heading",
+      "text": "Alert"
+    },
+    {
+      "type": "alert",
+      "title": "Limit reached",
+      "body": {
+        "type": "text",
+        "format": "markdown",
+        "text": "click on the following url to either view or redirected to the details"
+      },
+      "variant": "error"
+    }
+  ]
+};
 
   const statisticsTile = {
     "type": "tile",
@@ -92,26 +112,6 @@ exports.main = async (context = {}, sendResponse) => {
       }
     ]
   };
-
-  const alertComponent = {
-  "type": "tile",
-  "content": [
-    {
-      "type": "heading",
-      "text": "Alert"
-    },
-    {
-      "type": "alert",
-      "title": "Limit reached",
-      "body": {
-        "type": "text",
-        "format": "markdown",
-        "text": "click on the following url to either view or redirected to the details"
-      },
-      "variant": "error"
-    }
-  ]
-};
   
 const iframeTile = {
   "type": "tile",
