@@ -14,7 +14,8 @@ const introMessage =
 				"text": "Data"
 			},
     ]
-    }, {
+    }; 
+const statistics = {
   "type": "statistics",
   "items": [
    {
