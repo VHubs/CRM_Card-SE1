@@ -8,20 +8,20 @@ exports.main = async (context = {}, sendResponse) => {
 const tileOne = 
     {
 		"type": "tile",
-		"content": [
+		"content": 
 			{
 				"type": "heading",
 				"text": "CRM Card"
 			},
-      {
-"type": "alert",
-"title": "Alert: something you should be aware of",
-"variant": "error",
-"body": {
-"type": "text",
-"text": "click on the following url to either view or redirected to the document"
-}
-    ]
+      			{
+		"type": "alert",
+		"title": "Alert: something you should be aware of",
+		"variant": "error",
+		"body": {
+		"type": "text",
+		"text": "click on the following url to either view or redirected to the document"
+			}
+    
     };
     
   const nextSteps = [
