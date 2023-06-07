@@ -130,9 +130,9 @@ const iframeTile = {
       "onClick": {
         "type": 'IFRAME',
         // Width and height of the iframe (in pixels)
-        "width": 700,
-        "height": 400,
-        "uri": 'https://www.boerse.de/realtime-kurse/Dax-Aktien/DE0008469008',
+        "width": 1200,
+        "height": 600,
+        "uri": 'https://www.hubspot.com/artificial-intelligence',
       },
     },
   ],
