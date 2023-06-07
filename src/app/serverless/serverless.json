@@ -5,7 +5,7 @@
     "crm-card": {
       "file": "example-card.js",
       "secrets": [],
-      "location":"crm.record.tab"
+      "location":"crm.record.sidebar"
     }
   }
 }
