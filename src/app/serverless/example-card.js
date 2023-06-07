@@ -5,7 +5,7 @@ exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
 
-const introMessage = 
+const KPIs = 
 {
     "type": "tile",
     "content": [
