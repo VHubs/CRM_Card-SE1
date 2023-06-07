@@ -6,7 +6,7 @@ exports.main = async (context = {}, sendResponse) => {
   const { firstname } = context.propertiesToSend;
 
   const tileOne = {
-    "type": "tile",
+    "type": "crm-card",
 "location":"crm.record.tab",
     "content": [
       {
@@ -35,7 +35,7 @@ exports.main = async (context = {}, sendResponse) => {
 					},
 					{
 						"label": "Address:",
-						"value": "Cambridge, 25 First St 2nd Floor, United States"
+						"value": "Am Postbahnhof 17, Berlin, Germany"
 					},
 					{
 						"label": "Schedule:",
